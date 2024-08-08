@@ -19,7 +19,7 @@ Panduan ini akan membantu kamu menginstal Node.js versi 16.14.2 dan Angular CLI 
 ### 1.3. Verifikasi Instalasi Node.js
 1. Buka Command Prompt (CMD) atau PowerShell.
 2. Ketik perintah berikut untuk memverifikasi instalasi Node.js:
-   ```bash node -v 
+    - node -v 
 3. Verifikasi juga instalasi npm dengan perintah 
     - npm -v
 
