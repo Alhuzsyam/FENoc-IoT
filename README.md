@@ -1,27 +1,32 @@
 # Nocproj
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+# Tutorial Install Angular CLI 16.2.14 dan Node.js 16.14.2 di Windows
 
-## Development server
+Panduan ini akan membantu kamu menginstal Node.js versi 16.14.2 dan Angular CLI versi 16.2.14 di Windows.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 1. Menginstal Node.js 16.14.2
 
-## Code scaffolding
+### 1.1. Download Node.js
+1. Kunjungi [situs resmi Node.js](https://nodejs.org/en/download/releases/).
+2. Di halaman tersebut, scroll ke bawah dan cari versi **16.14.2**.
+3. Unduh installer untuk Windows yang sesuai dengan arsitektur sistem kamu (x64 atau x86), biasanya file dengan ekstensi `.msi`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 1.2. Install Node.js
+1. Setelah unduhan selesai, buka file installer yang telah diunduh.
+2. Ikuti panduan instalasi, dan pastikan untuk mencentang opsi **Add to PATH** agar Node.js dan npm (Node Package Manager) bisa diakses dari Command Prompt.
+3. Klik `Next` hingga instalasi selesai.
 
-## Build
+### 1.3. Verifikasi Instalasi Node.js
+1. Buka Command Prompt (CMD) atau PowerShell.
+2. Ketik perintah berikut untuk memverifikasi instalasi Node.js:
+   ```bash node -v 
+3. Verifikasi juga instalasi npm dengan perintah 
+    - npm -v
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 1.4 Install Angular CLI
+1. Dengan Node.js terinstal, sekarang kita bisa menginstal Angular CLI.
+2. Di CMD atau PowerShell, jalankan perintah berikut untuk menginstal Angular CLI versi 16.2.14 secara global:
+    - npm install -g @angular/cli@16.2.14
+3. Verifikasi juga instalasi angurlar dengan perintah 
+    - ng version
