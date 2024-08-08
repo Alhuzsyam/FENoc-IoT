@@ -1,0 +1,153 @@
+<div class="container" *ngIf="sensorData">
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2"><h3 class="card-title"><i class="fa-solid fa-bolt text-warning"></i></h3></div>
+                        <div class="col-md-6">
+                            Kwh Today<br>
+                            <div class="subtitle">
+                                Watt
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5>{{ sensorData.kwh_today }}%</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2"><h3 class="card-title"><i class="fa-solid fa-bolt text-pink"></i></h3></div>
+                        <div class="col-md-6">
+                            Kwh Last<br>
+                            <div class="subtitle">
+                                Watt
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5>{{ sensorData.kwh_last }}%</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2"><h3 class="card-title"><i class="fa-solid fa-bolt text-pink"></i></h3></div>
+                        <div class="col-md-6">
+                            Kvarh<br>
+                            <div class="subtitle">
+                                Watt
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5>{{ sensorData.kvarh }}%</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2"><h3 class="card-title"><i class="fa-solid fa-bolt text-pink"></i></h3></div>
+                        <div class="col-md-6">
+                            T-L<br>
+                            <div class="subtitle">
+                                Watt
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5>{{ sensorData.tl }}%</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3" *ngFor="let volt of ['voltA', 'voltB', 'voltC']; let i = index">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2"><h3 class="card-title"><i class="fa-solid fa-bolt text-warning"></i></h3></div>
+                        <div class="col-md-6">
+                             {{ volt | uppercase }}<br>
+                            <div class="subtitle">
+                                {{ sensorData[volt] }}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5>{{ sensorData[volt] }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3" *ngFor="let curr of ['currA', 'currB', 'currC']; let i = index">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2"><h3 class="card-title"><i class="fa-solid fa-bolt-lightning text-warning"></i></h3></div>
+                        <div class="col-md-6">
+                             {{ curr | uppercase }}<br>
+                            <div class="subtitle">
+                                {{ sensorData[curr] }}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5>{{ sensorData[curr] }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2"><h3 class="card-title"><i class="fa-solid fa-wave-square text-pink"></i></h3></div>
+                        <div class="col-md-6">
+                            Frequency<br>
+                            <div class="subtitle">
+                                {{ sensorData.freq }}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5>{{ sensorData.freq }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2"><h3 class="card-title"><i class="fa-solid fa-map-pin text-pink"></i></h3></div>
+                        <div class="col-md-6">
+                            Warehouse<br>
+                            <div class="subtitle">
+                                {{ sensorData.location }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <app-chart></app-chart>
+        </div>
+        <div class="col-md-6">
+            <app-chart2></app-chart2>
+        </div>
+    </div>
+</div>
